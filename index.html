@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For walliiiiii ♡</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff}
+body{background:radial-gradient(circle at 50% 0%,#34205f 0%,#130d27 45%,#070510 100%);overflow-x:hidden}
+#stars{position:fixed;inset:0;pointer-events:none;opacity:.75;background-image:radial-gradient(circle,rgba(255,255,255,.9) 1px,transparent 1px),radial-gradient(circle,rgba(210,180,255,.65) 1px,transparent 1px);background-size:90px 90px,140px 140px;background-position:10px 20px,40px 70px;animation:drift 18s linear infinite}
+@keyframes drift{to{background-position:100px 120px,170px 10px}}
+main{position:relative;z-index:1;min-height:100vh;display:grid;place-items:center;padding:28px 18px}
+.app{width:min(960px,100%);min-height:min(720px,calc(100vh - 56px));display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.brand{font-weight:800;letter-spacing:.04em}.date{font-size:.82rem;color:#aaa0b9}
+.panel{flex:1;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.16);border-radius:30px;background:rgba(255,255,255,.075);backdrop-filter:blur(14px);box-shadow:0 25px 80px rgba(0,0,0,.35);padding:42px;overflow:hidden}
+.screen{width:100%;animation:screenIn .35s ease}.screen.exit{animation:screenOut .18s ease forwards}@keyframes screenIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}@keyframes screenOut{to{opacity:0;transform:translateX(-18px)}}
+.center{text-align:center}.eyebrow{color:#d8b9ff;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(3.4rem,10vw,7rem);margin:12px 0;line-height:.92}h2{font-size:clamp(2rem,5vw,3.4rem);margin:10px 0 18px}h3{margin:10px 0 7px}p{color:#ddd5e9;line-height:1.8;font-size:1.04rem}
+.btn{border:0;border-radius:999px;padding:14px 24px;margin-top:18px;background:linear-gradient(135deg,#c58cff,#7d4dff);color:white;font-weight:800;cursor:pointer;font-size:1rem;box-shadow:0 10px 30px rgba(125,77,255,.3);transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(125,77,255,.45)}.btn.secondary{background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.13)}
+.chapter-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}.chapter{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:white;text-align:left;border-radius:22px;padding:22px;cursor:pointer;transition:.2s}.chapter:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}.chapter .num{color:#d8b9ff;font-size:.75rem;letter-spacing:.16em}.chapter strong{display:block;font-size:1.18rem;margin-top:7px}.chapter span{display:block;color:#aaa0b9;font-size:.9rem;margin-top:5px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.mini{padding:22px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11)}.emoji{font-size:2rem}.small{font-size:.85rem;color:#aaa0b9}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px}.dots{display:flex;gap:7px;justify-content:center}.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22)}.dot.active{background:#d8b9ff;transform:scale(1.2)}
+.secret{margin-top:24px;padding:22px;border-radius:20px;background:rgba(197,140,255,.1);border:1px solid rgba(197,140,255,.25);animation:pop .5s ease}@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}.heart{display:inline-block;animation:pulse 1.3s infinite;font-size:3rem}@keyframes pulse{50%{transform:scale(1.2)}}
+@media(max-width:700px){main{padding:14px}.app{min-height:calc(100vh - 28px)}.panel{padding:26px 18px;border-radius:24px}.chapter-grid,.grid{grid-template-columns:1fr}.topbar{margin-bottom:12px}.nav{flex-wrap:wrap}.nav .dots{order:-1;width:100%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<main><div class="app">
+  <div class="topbar"><div class="brand">For Wallliiii XD ♡</div><div class="date">02 • 09 • 2026</div></div>
+  <div class="panel" id="panel"></div>
+</div></main>
+<script>
+const panel=document.getElementById('panel');
+let current=0;let secretShown=false;
+const pages=[
+()=>`<div class="screen center"><div class="eyebrow">a tiny birthday experience</div><h1>HAII ANWIII :3 </h1><p>GUESSS WHAT, someone has been quietly cooking up a little surprise for youuuuh :3 (i would not say 'cook' cuz it looks very bad but me tried my besttt T^T, first time making this type of thing T^T. HOPE YOU LIKEE ITT I HAVE BEEN WORKING ON THIS FOR DA PAST WEEK :3) (and yesss this slide titless ideasss and stufff was given by GPT since i asked for ideas on how to createe, BUT CODING IS MY PARTTT :3. LIKEE I DID NOT JS TELL GPT TO MAKE ME A WEBSITE AND GIVEE, ME MADEEE :3(yes i codedd ittt no cap :3 )) (obvv codded it with the help of my brotherr not aloneee, but hey we got the job done :3)</p><button class="btn" data-go="1">Open the SURPRISE!?? ✨</button></div>`,
+()=>`<div class="screen"><div class="eyebrow">chapter one</div><h2>HAPPPYY BIRTHDAYYY WALLLIIIIIIIIIII! :D :3 🎂</h2><p>HMMMM SOOOO 2ND SEPT, FINALLYY THE DAY IS HEREE ALASS :D. THIS IS YOUR DAYYYYYY LIVE ITT UPPPP AND HAVE LOTS OF FUNNN, VERY HAPPYYY BDAYYYY WALLII :D.</p><p>Thank you for all the laughsss, random conversations, ridiculous moments, and the memories that somehow become stories we keep bringing up later XD. And honestlyyy i have enjoyed every bit of ittt :D.</p><p><strong>May this be your best day of the yearr and hopefully you will look back on this day at sometime in life to see how memorable it wass XD (meri english bakwas hai dont mind pls T^T ).</strong></p>${nav(1)}</div>`,
+()=>`<div class="screen"><div class="eyebrow">chapter two</div><h2>HMMM.. OH RYT, THE WALLIBEAR LORE :3 </h2><div class="grid"><div class="mini"><div class="emoji">😂</div><h3>DID someone sayy.. InsIDE JOKESS!?</h3><p>WOOP WOOP :3 (yeahh drink water i am watching you 👹).</p></div><div class="mini"><div class="emoji">🧠</div><h3>RANDOM CHAOSSS (WEMMBUUUU :3 ) </h3><p>every day with you is a chaos in a FUNNN wayyy that i loveEE XD, BUT STILLLL, DONT CHANGEE YOUR WAYSS AND STAY HOW YOU AREEEE, YOU ARE PERFECTOOO :3 (for assurance, es spaniol :3)</p></div><div class="mini"><div class="emoji">⭐</div><h3>NOW WE TALKINGG, GOOD MEMORIESS :D :3</h3><p>every memory i have made with you till now is highkey my favv XD. EVERY MEMORYYY W :3</p></div></div>${nav(2)}</div>`,
+()=>`<div class="screen center"><div class="eyebrow">HOLY CHAPTER</div><h2>One last thing...</h2><p> OOOO THIS BUTTON LOOKS SUS- you sure you wanna click it? :O</p><button class="btn" id="secretBtn">DO NOT PRESS, PROCEEDE WITH CAUTION 👀</button>${secretShown?`<div class="secret"><h2>HAPPYYYYYY BDAYYYYYYYYYYYYYYYY WALLIBEARR</h2><p>I hope this year gives you a ridiculous amount of reasons to smile, laugh, and make more memories worth keepinggggg.</p><p><strong>Stay awesome. Stay chaotic. Have an amazing birthDAYYYYYYYYYY. 💜 (bohot baar likh diya mene happy birthdayy BUT ITSS YOUR BDAYYY SO ME WRITE :3) (Confetti credit goes to GPT we could not figure out how to place it 😭😭😭)</strong></p><div class="heart">♡</div></div>`:''}${nav(3)}</div>`,
+()=>`<div class="screen center"><div class="eyebrow">the end? ANOTHER YEAR TO START, HAVE AN AWESOME BEGINING :3</div><h2>02 / 09 / 2026</h2><p>Made especially for Anwiiiiiii (agar kahi bhi spellings mistake ho pls dont mind T^T).</p><p class="small">ITS TIME FOR CAKEE :3, i will be waiting for my piece :3.</p><button class="btn secondary" data-go="0">↩ Start again</button></div>`
+];
+function nav(i){return `<div class="nav"><button class="btn secondary" data-go="${i-1}">← Back</button><div class="dots">${[1,2,3].map(n=>`<span class="dot ${n===i?'active':''}"></span>`).join('')}</div><button class="btn" data-go="${i+1}">${i===3?'Finish →':'Next →'}</button></div>`}
+function render(next){
+ const old=panel.querySelector('.screen');if(old){old.classList.add('exit');setTimeout(()=>{current=next;panel.innerHTML=pages[current]();bind();},160)}else{current=next;panel.innerHTML=pages[current]();bind()}
+}
+function bind(){panel.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>render(Number(b.dataset.go))));const s=panel.querySelector('#secretBtn');if(s)s.addEventListener('click',()=>{secretShown=true;render(3);confetti()})}
+function confetti(){for(let i=0;i<30;i++){const c=document.createElement('span');c.textContent=['✦','★','✧','♡'][Math.floor(Math.random()*4)];c.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-20px;z-index:99;font-size:${14+Math.random()*22}px;color:#d8b9ff;pointer-events:none;transition:transform 2s linear,opacity 2s linear`;document.body.appendChild(c);requestAnimationFrame(()=>{c.style.transform=`translateY(${innerHeight+60}px) rotate(${Math.random()*500}deg)`;c.style.opacity='0'});setTimeout(()=>c.remove(),2200)}}
+render(0);
+</script>
+</body>
+</html>
